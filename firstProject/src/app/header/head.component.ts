@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HeadService} from './header.service'
 
 @Component({
     selector: 'header',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 
 export class Header {
-    title = 'header component';
+    out ;
+    constructor(ser:HeadService){
+        this.out = ser.console()
+    }
+    
+    heads = ["head1", "head2", "head3"];   
 }
