@@ -1,1 +1,25 @@
-<p>test works!</p>
+<h1>Adviya - 118146905 - DE844 - CAP917 G-2</h1>
+
+ single class binding  -->
+<label>
+  single class binding
+  <input [class.form-control]="ctrl" />
+</label>
+
+<br /> 
+
+multi class binding 
+<label>
+  multi class binding
+  <br />
+  <input [class]="newC" />
+</label>
+
+<br /> 
+
+two way binding binding 
+<label>
+  two way binding binding
+  <br />
+  <input [(ngModel)]="value" (keyUp.enter)="showVal()" />
+</label>

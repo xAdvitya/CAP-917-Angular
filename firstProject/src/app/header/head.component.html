@@ -1,2 +1,33 @@
-<h1 *ngFor="let item of heads">{{ item }}</h1>
-<h2 color="red">{{ out }}</h2>
+<div class="container" [style.backgroundColor]="btn ? color : 'green'">
+  <h1 [style]="fontSize" *ngFor="let item of heads">{{ item }}</h1>
+
+  <p [style]="fontSize">{{ out }}</p>
+  <p [style]="fontSize">out</p>
+
+  <img [style]="imgStyle"
+    src="https://avatars0.githubusercontent.com/u/54709416?s=460&u=d8c3a57d289b75eefb55a3f47e55c93615614c66&v=4" />
+  <button (click)="changeColor($event)" [class.btn]="btn" [class.btn-danger]="btn">
+    click
+  </button>
+  <button [class]="btnClass">click</button>
+
+  <input (keyUp.enter)="text($event)" />
+  <input #input (keyUp.enter)="text2(input.value)" />
+
+
+  <h3>pipe {{uppercase | uppercase}}</h3>
+
+  <div *ngIf="arr.length == 4">
+    <h4>length is 4</h4>
+  </div>
+
+  <div [ngSwitch]="switch">
+    <div *ngSwitchCase="'CAP917'">
+      this is cap 917
+    </div>
+    <div *ngSwitchCase="'CAP918'">
+      this is cap 918
+    </div>
+  </div>
+
+</div>
