@@ -1,6 +1,17 @@
 <form>
   <label for="name">enter name</label>
-  <input class="form-control" type="text" />
+  <input
+    ngModel
+    
+    name="name"
+    #model="ngModel"
+    class="form-control"
+    type="text"
+    (change)="changeI(model)"
+  />
+  <div class="alert alert-danger" *ngIf="model.touched && !model.valid">
+    enter a value bahi !
+  </div>
 
   <label for="name">enter name</label>
   <input class="form-control" type="text" />
