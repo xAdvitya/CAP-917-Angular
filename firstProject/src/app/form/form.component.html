@@ -2,7 +2,7 @@
   <label for="name">enter name</label>
   <input
     ngModel
-    
+    required
     name="name"
     #model="ngModel"
     class="form-control"
@@ -13,8 +13,22 @@
     enter a value bahi !
   </div>
 
-  <label for="name">enter name</label>
-  <input class="form-control" type="text" />
+  <label for="reg">enter registeration number</label>
+  <input
+    ngModel
+    required
+    name="reg"
+    #reg="ngModel"
+    class="form-control"
+    type="text"
+    minlength="4"
+  />
+  <div class="alert alert-danger" *ngIf="reg.touched && !model.valid">
+    enter a value bahi !
+    <div class="alert alert-danger" *ngIf="reg.errors.minlength">
+      min 4 digits
+    </div>
+  </div>
 
   <button class="btn btn-submit" type="submit">click</button>
 </form>
