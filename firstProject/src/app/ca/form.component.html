@@ -1,0 +1,25 @@
+<form class="form-group">
+  <label for="name">enter name</label>
+  <input ngModel #name="ngModel" class="form-control" type="text" />
+
+  <label for="reg">enter registeration number</label>
+  <input
+    ngModel
+    required
+    name="reg"
+    #reg="ngModel"
+    class="form-control"
+    type="text"
+    minlength="6"
+    (change)="changeI(reg)"
+  />
+
+  <div class="alert alert-warning" *ngIf="reg.touched && !reg.valid">
+    enter a value !
+    <div class="alert alert-danger" *ngIf="reg.errors.minlength">
+      enter minimimun 6 digits
+    </div>
+  </div>
+
+  <button class="btn btn-success" type="submit">submit</button>
+</form>

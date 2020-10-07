@@ -1,0 +1,12 @@
+.colorx{
+  background-color: aqua;
+}
+
+.sizex{
+  height: 100px;
+  width: 200px;
+}
+
+.hovx:hover {
+  background-color: blueviolet;
+}
