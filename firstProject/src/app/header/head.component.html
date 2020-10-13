@@ -1,5 +1,5 @@
 <div class="container" [style.backgroundColor]="btn ? color : 'green'">
-  <h1 [style]="fontSize" *ngFor="let item of heads">{{ item }}</h1>
+  <h1  *ngFor="let item of forLoop">{{ item }}</h1>
 
   <p [style]="fontSize">{{ out }}</p>
   <p [style]="fontSize">out</p>
@@ -17,8 +17,8 @@
 
   <h3>pipe {{uppercase | uppercase}}</h3>
 
-  <div *ngIf="arr.length == 4">
-    <h4>length is 4</h4>
+  <div *ngIf="name == 'Advitya'">
+    <h4>name is Advitya</h4>
   </div>
 
   <div [ngSwitch]="switch">
@@ -30,4 +30,8 @@
     </div>
   </div>
 
+  <button ngClass="btn btn-danger">button</button>
+
+  <a routerLink="/ca">ca</a>
+  <router-outlet></router-outlet>
 </div>

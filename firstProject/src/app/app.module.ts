@@ -15,6 +15,7 @@ import { FormComponent } from './form/form.component';
 import { CaComponent } from './ca/ca.component';
 import { SwitchComponent } from './ca/switch.component';
 import { FormComponentCa } from './ca/form.component';
+import { RoutingComponent } from './routing/routing.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormComponentCa } from './ca/form.component';
     CaComponent,
     SwitchComponent,
     FormComponentCa,
+    RoutingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [HeadService],

@@ -14,11 +14,12 @@ export class Header {
   imgStyle = { width: "10px", height: "10px" };
   fontSize = "color:red;font-size:90px";
   btnClass = "btn btn-primary";
-  heads = ["head1", "head2", "head3"];
+  forLoop = ["hello", "how", "are you"];
   value = "input banana box"
   uppercase = "uppercase"
   arr = [1, 2, 3, 3]
   switch = "CAP918"
+  name='xAdvitya'
 
   constructor(ser: HeadService) {
     // let ser = new HeadService()
